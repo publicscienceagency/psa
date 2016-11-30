@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main role="main">
+    <section class="overview">
+        <div class="mission">Exploring ways to make the invisible algorithms that run the world more visible, intuitive, and accessible.</div>
+        <div class="services">
+            <h6>Services</h6>
+            <ul>
+                <li>Product strategy</li>
+                <li>User experience and interaction design</li>
+                <li>Machine learning and artificial intelligence</li>
+                <li>Agent-based modeling simulations</li>
+                <li>Systems thinking education and workshops</li>
+            </ul>
+            <a href="/contact" class="button">Get in touch!</a>
+        </div>
+    </section>
+    <section class="work">
+        <header>
+            <h1>Projects and Research</h1>
+            <h5>Experiments with simulations, artificial intelligence, and machine learning.</h5>
+        </header>
+        <ul>
+            {% for post in posts %}
+                {% if post.category.name == 'work' %}
+                    <li>
+                        <a href="{{ post.url }}"><img src="/assets/work/{{ post.image }}"></a>
+                        <h2><a href="{{ post.url }}">{{ post.title_html|safe }}</a></h2>
+                        <h6>{{ post.description }}</h6>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="writing fullwidth">
+        <div class="constrained">
+            <blockquote>Computer simulations-virtual replicas modeled off our understanding of the world-in order repdoruce the behaviors of a system too complex to be studied with traditional mathematical techniques, and test out ideas too harmful and drastic to try on real people. Designing, building, experimenting with, and analyzing these models can help us develop and improve upon our mental frameworks of social behavior and phemonena, and ultimately expand the way we approach service design and social innovation.</blockquote>
+            <a href="/blog">Check our blog / Medium for more articles</a>
+        </div>
+    </section>
+    <section class="workshops">
+        <header>
+            <h1>Workshops</h1>
+            <h5>Building educational frameworks around machine learning basics, as well as how to avoid biases in algorithms.</h5>
+        </header>
+        <ul>
+            {% for post in posts %}
+                {% if post.category.name == 'workshops' %}
+                    <li>
+                        <a href="{{ post.exturl }}"><img src="/assets/workshops/{{ post.image }}"></a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </section>
+</main>
+{% endblock %}

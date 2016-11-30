@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block meta %}
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ post.title }}">
+    <meta property="og:description" content="{{ post.description }}">
+    <meta property="og:image" content="{{ site_data.site_url }}/{{ post.image }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ post.title }}">
+    <meta name="twitter:description" content="{{ post.description }}">
+    <meta name="twitter:image" content="{{ site_data.site_url }}/{{ post.image }}">
+{% endblock %}
+
+{% block content %}
+<main role="main">
+    <article>
+        <header>
+            <h1>{{ post.title }}</h1>
+            <h5>{{ post.description }}</h5>
+        </header>
+        <img src="{{ post.top_image }}">
+        <div class="meta">
+            <div class="intro">
+                {% for para in post.intro %}
+                    <p>{{ para|safe }}</p>
+                {% endfor %}
+            </div>
+            <ul class="process">
+                <li>Process</li>
+                {% for step in post.process %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="content">{{ post.html|safe }}</div>
+    </article>
+    <section class="tools fullwidth">
+        <div class="constrained">
+            {% for name, tool in post.tools.items() %}
+                <div class="tool">
+                    <h2>Tools we built: {{ name }}</h2>
+                    <p>{{ tool.description }}</p>
+                    <img src="{{ tool.image }}">
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
