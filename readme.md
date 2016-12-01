@@ -19,11 +19,15 @@ then link up the directories and config to their proper places:
     ln -sf $PWD/theme ~/.port/themes/psa
     ln -sf $PWD/conf.yaml ~/.port/psa.yaml
 
+then build the initial site:
+
+    port build psa
+
 cool, now you can boot up a `port` server:
 
     port serve psa
 
-it'll be viewable at `localhost:5051`.
+it'll be viewable at `localhost:5005`.
 
 then whenever you change stuff in the `content` dir, rebuild before you refresh:
 
