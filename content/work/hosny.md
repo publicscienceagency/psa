@@ -11,9 +11,14 @@ intro:
     - "HOSNY is a participative agent-based simulation built to speculate alternative economies. It asks how world-building as interactive gameplay creates the opportunity for a better and more complete understanding of the complex relationships that make up the systems of our world."
     - "Players set a virtual model of New York with simulated citizens, built using data based on the U.S. Census and agent-based modeling, according to their preferences of how the world should function. They are then assigned a character from this simulated pool and given the chance to steer the future of the city through a simple democracy: players take turns voting on important issues at the end of each play session."
 tools:
-    Cess:
+    System Designer (SYD):
+        url: https://github.com/frnsys/system_designer
         description: "A simple agent-based modeling framework, supporting distributed computation"
-        image: /assets/posts/cess.gif
+        images:
+            - /assets/posts/syd01.gif
+            - /assets/posts/syd02.gif
+            - /assets/posts/syd03.gif
+            - /assets/posts/syd04.gif
 ---
 
 # Humans of Simulated New York

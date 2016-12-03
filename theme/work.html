@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<main role="main">
+    <section class="work">
+        <header>
+            <h1>Projects and Research</h1>
+            <h5>Experiments with simulations, artificial intelligence, and machine learning.</h5>
+        </header>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <a href="{{ post.url }}"><img src="/assets/work/{{ post.image }}"></a>
+                    <h2><a href="{{ post.url }}">{{ post.title_html|safe }}</a></h2>
+                    <h6>{{ post.description }}</h6>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</main>
+{% endblock %}
+

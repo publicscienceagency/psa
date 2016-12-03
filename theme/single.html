@@ -38,9 +38,13 @@
         <div class="constrained">
             {% for name, tool in post.tools.items() %}
                 <div class="tool">
-                    <h2>Tools we built: {{ name }}</h2>
+                    <h2>Tools we built: <a href="{{ tool.url }}">{{ name }}</a></h2>
                     <p>{{ tool.description }}</p>
-                    <img src="{{ tool.image }}">
+                    <div class="tool-images">
+                        {% for img in tool.images %}
+                            <img src="{{ img }}">
+                        {% endfor %}
+                    </div>
                 </div>
             {% endfor %}
         </div>

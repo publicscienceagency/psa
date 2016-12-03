@@ -1,8 +1,8 @@
 {% macro render_post(post) -%}
     <div class="post">
-        <h1><a href="{{ post.url }}">{{ post.title_html|safe }}</a></h1>
-        <h6>Published on {{ post.published_at.strftime('%m.%d.%Y') }} in [<a href="{{ post.category.url }}">{{ post.category.name }}</a>]</h6>
-        {{ post.html|safe }}
+        <h1 class="post-title"><a href="{{ post.url }}">{{ post.title_html|safe }}</a></h1>
+        <h6 class="post-published">{{ post.published_at.strftime('%m.%d.%Y') }}</h6>
+        <div class="post-content">{{ post.html|safe }}</div>
     </div>
 {%- endmacro %}
 

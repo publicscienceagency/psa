@@ -2,11 +2,16 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
     <main role="main">
-        {% for post in posts %}
-            {{ macros.render_post(post) }}
-        {% endfor %}
+        <section class="blog">
+        <header>
+            <h1>Writing</h1>
+        </header>
+        <ul>
+            {% for post in posts %}
+                <li>{{ macros.render_post(post) }}</li>
+            {% endfor %}
+        </ul>
+        </section>
     </main>
-
 {% endblock %}

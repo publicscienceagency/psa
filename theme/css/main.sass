@@ -2,22 +2,22 @@
 @import 'fonts'
 
 $primaryColor: #1a237e
+$altColor: #9419ff
 $altFont: 'Young Serif', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
-
 *
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
 ::-moz-selection
-  background: #aaaaaa
-  color: #fff
-  text-shadow: none
+  background: #eeeeee
+  color: #444
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1)
 
 ::selection
-  background: #aaaaaa
-  color: #fff
-  text-shadow: none
+  background: #eeeeee
+  color: #444
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1)
 
 .constrained
   max-width: 980px
@@ -25,7 +25,6 @@ $altFont: 'Young Serif', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
   padding: 0 3em
 
 html
-  padding: 3em 0
   background: #f4f4f4
 
 img
@@ -45,6 +44,7 @@ body
 .site-header
   @extend .constrained
   display: flex
+  margin-top: 3em
   margin-bottom: 2.5em
   h1
     flex: 1
@@ -79,15 +79,19 @@ nav
   font-size: 1.1em
   display: inline-block
   color: $primaryColor
+  box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.8)
   &:hover
     text-decoration: none
+    box-shadow: 1px 1px 12px rgba(249, 98, 98, 0.9)
 
 .work, .workshops
   h2
     font-family: $altFont
+    margin-bottom: 0.5em
   img
     width: 100%
     margin: 0 0 0.5em 0
+    box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.2)
   ul
     margin: 0 0 1.5em
     display: flex
@@ -111,6 +115,8 @@ section, article
       text-shadow: 2px 2px 0px #55ee34
     h5
       font-size: 1.2em
+section:last-child
+  margin-bottom: 0
 
 .fullwidth
   max-width: none
@@ -125,11 +131,11 @@ section, article
     display: block
 
 .workshops
-  color: #9419ff
+  color: $altColor
   h1
     text-shadow: 2px 2px 0px rgba(249,98,98,0.5)
   li img
-    border: 1px solid #9419ff
+    border: 1px solid $altColor
 
 article
   margin-top: 6em
@@ -173,5 +179,24 @@ article
     font-family: $altFont
     font-size: 1.2em
     margin: 1.5em 0
+    a
+      text-decoration: underline
   p
     margin: 0 0 2em 0
+  img
+    max-width: 250px
+
+.post
+  margin: 0 0 4em 0
+  .post-title a
+    color: $altColor
+    font-size: 2.5em
+    text-shadow: 2px 2px 0px rgba(249,98,98,0.5)
+  .post-published
+    color: rgba(0,0,0,0.4)
+  .post-content
+    margin: 1em 0
+    font-size: 1.4em
+
+.page-content
+  font-size: 1.4em

@@ -64,14 +64,14 @@ table {
   box-sizing: border-box; }
 
 ::-moz-selection {
-  background: #aaaaaa;
-  color: #fff;
-  text-shadow: none; }
+  background: #eeeeee;
+  color: #444;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); }
 
 ::selection {
-  background: #aaaaaa;
-  color: #fff;
-  text-shadow: none; }
+  background: #eeeeee;
+  color: #444;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); }
 
 .constrained, .site-header, section, article {
   max-width: 980px;
@@ -79,7 +79,6 @@ table {
   padding: 0 3em; }
 
 html {
-  padding: 3em 0;
   background: #f4f4f4; }
 
 img {
@@ -98,6 +97,7 @@ body {
 
 .site-header {
   display: flex;
+  margin-top: 3em;
   margin-bottom: 2.5em; }
   .site-header h1 {
     flex: 1;
@@ -131,15 +131,19 @@ nav {
   padding: 0.5em 1em 0.4em;
   font-size: 1.1em;
   display: inline-block;
-  color: #1a237e; }
+  color: #1a237e;
+  box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.8); }
   .button:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    box-shadow: 1px 1px 12px rgba(249, 98, 98, 0.9); }
 
 .work h2, .workshops h2 {
-  font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin-bottom: 0.5em; }
 .work img, .workshops img {
   width: 100%;
-  margin: 0 0 0.5em 0; }
+  margin: 0 0 0.5em 0;
+  box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.2); }
 .work ul, .workshops ul {
   margin: 0 0 1.5em;
   display: flex;
@@ -162,6 +166,9 @@ section, article {
       text-shadow: 2px 2px 0px #55ee34; }
     section header h5, article header h5 {
       font-size: 1.2em; }
+
+section:last-child {
+  margin-bottom: 0; }
 
 .fullwidth {
   max-width: none;
@@ -222,7 +229,26 @@ article {
   font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1.2em;
   margin: 1.5em 0; }
+  .tools h2 a {
+    text-decoration: underline; }
 .tools p {
   margin: 0 0 2em 0; }
+.tools img {
+  max-width: 250px; }
+
+.post {
+  margin: 0 0 4em 0; }
+  .post .post-title a {
+    color: #9419ff;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 0px rgba(249, 98, 98, 0.5); }
+  .post .post-published {
+    color: rgba(0, 0, 0, 0.4); }
+  .post .post-content {
+    margin: 1em 0;
+    font-size: 1.4em; }
+
+.page-content {
+  font-size: 1.4em; }
 
 /*# sourceMappingURL=main.css.map */
