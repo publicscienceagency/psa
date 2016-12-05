@@ -34,6 +34,7 @@
         </div>
         <div class="content">{{ post.html|safe }}</div>
     </article>
+    {% if post.tools %}
     <section class="tools fullwidth">
         <div class="constrained">
             {% for name, tool in post.tools.items() %}
@@ -49,5 +50,6 @@
             {% endfor %}
         </div>
     </section>
+    {% endif %}
 </main>
 {% endblock %}

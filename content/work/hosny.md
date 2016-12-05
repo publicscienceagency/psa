@@ -1,5 +1,5 @@
 ---
-published_at: 11.30.2016 16:41
+published_at: 11.30.2016 02:00
 image: hosny.gif
 description: Economic simulation and game for speculating alternative economies
 process:

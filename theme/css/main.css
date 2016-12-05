@@ -139,7 +139,10 @@ nav {
 
 .work h2, .workshops h2 {
   font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+  padding-right: 1em; }
+.work h6, .workshops h6 {
+  padding-right: 1em; }
 .work img, .workshops img {
   width: 100%;
   margin: 0 0 0.5em 0;
@@ -151,7 +154,7 @@ nav {
   flex-wrap: wrap; }
 .work li, .workshops li {
   flex: 1;
-  min-width: 220px;
+  min-width: 240px;
   max-width: 280px;
   margin: 0 0 2em 0; }
 
@@ -250,5 +253,7 @@ article {
 
 .page-content {
   font-size: 1.4em; }
+  .page-content p {
+    margin-bottom: 1em; }
 
 /*# sourceMappingURL=main.css.map */
