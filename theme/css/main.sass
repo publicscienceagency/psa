@@ -142,12 +142,17 @@ section:last-child
 
 article
   margin-top: 6em
+  a
+    text-decoration: underline
   img
-    margin-bottom: 3em
+    margin: 0 auto 3em auto
+    display: block
   header
     margin-bottom: 3em
   p
+    font-size: 1.2em
     margin-bottom: 1em
+    line-height: 1.6
   .meta
     display: flex
     margin-bottom: 3em
@@ -155,11 +160,16 @@ article
     flex: 4
     font-size: 1.2em
     padding-right: 3em
-  .process
+  .extra
     flex: 1
     li:first-child
       text-transform: uppercase
       margin-bottom: 1em
+    ul
+      margin-bottom: 2em
+  blockquote
+    color: #575b80
+    padding-left: 2em
   .content
     h1, h2, h3, h4, h5, h6
       font-family: $altFont

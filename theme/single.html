@@ -25,12 +25,22 @@
                     <p>{{ para|safe }}</p>
                 {% endfor %}
             </div>
-            <ul class="process">
-                <li>Process</li>
-                {% for step in post.process %}
-                    <li>{{ step }}</li>
-                {% endfor %}
-            </ul>
+            <div class="extra">
+                <ul class="process">
+                    <li>Process</li>
+                    {% for step in post.process %}
+                        <li>{{ step }}</li>
+                    {% endfor %}
+                </ul>
+                {% if post.links %}
+                    <ul class="links">
+                        <li>Links</li>
+                        {% for title, url in post.links.items() %}
+                            <li><a href="{{ url }}">{{ title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
         </div>
         <div class="content">{{ post.html|safe }}</div>
     </article>

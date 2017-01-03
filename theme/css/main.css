@@ -193,12 +193,17 @@ section:last-child {
 
 article {
   margin-top: 6em; }
+  article a {
+    text-decoration: underline; }
   article img {
-    margin-bottom: 3em; }
+    margin: 0 auto 3em auto;
+    display: block; }
   article header {
     margin-bottom: 3em; }
   article p {
-    margin-bottom: 1em; }
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    line-height: 1.6; }
   article .meta {
     display: flex;
     margin-bottom: 3em; }
@@ -206,11 +211,16 @@ article {
     flex: 4;
     font-size: 1.2em;
     padding-right: 3em; }
-  article .process {
+  article .extra {
     flex: 1; }
-    article .process li:first-child {
+    article .extra li:first-child {
       text-transform: uppercase;
       margin-bottom: 1em; }
+    article .extra ul {
+      margin-bottom: 2em; }
+  article blockquote {
+    color: #575b80;
+    padding-left: 2em; }
   article .content h1, article .content h2, article .content h3, article .content h4, article .content h5, article .content h6 {
     font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: bold;
