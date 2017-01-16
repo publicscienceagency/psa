@@ -35,6 +35,12 @@ then whenever you change stuff in the `content` dir, rebuild before you refresh:
 
 ---
 
+if you change the theme sass, be sure to recompile it:
+
+    sass theme/css/main.sass theme/css/main.css
+
+---
+
 ## a note on setting up the embedded HOSNY replayer
 
     git submodule update --init --recursive
