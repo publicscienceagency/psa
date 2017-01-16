@@ -32,3 +32,21 @@ it'll be viewable at `localhost:5005`.
 then whenever you change stuff in the `content` dir, rebuild before you refresh:
 
     port build psa
+
+---
+
+## a note on setting up the embedded HOSNY replayer
+
+    git submodule update --init --recursive
+    cd theme/hosny
+    npm install -d
+    npm run build
+
+then you can `port build psa` etc
+
+if you make changes to HOSNY replay, then update here with the following:
+
+    cd theme/hosny
+    git pull
+    npm run build
+    port build psa
