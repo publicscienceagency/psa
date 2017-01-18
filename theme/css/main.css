@@ -1,6 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
+@import url("https://fonts.googleapis.com/css?family=Cousine:400,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,7 +62,8 @@ table {
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
 
 ::-moz-selection {
   background: #eeeeee;
@@ -73,13 +75,14 @@ table {
   color: #444;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); }
 
-.constrained, .site-header, section, article {
+.constrained {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 3em; }
 
 html {
-  background: #f4f4f4; }
+  background: #ffd8de;
+  font-family: "Cousine", monospace; }
 
 img {
   max-width: 100%; }
@@ -92,178 +95,60 @@ a {
 
 body {
   line-height: 1.5;
-  color: #1a237e;
-  font-family: "Cotham Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-
-.site-header {
-  display: flex;
-  margin-top: 3em;
-  margin-bottom: 2.5em; }
-  .site-header h1 {
-    flex: 1;
-    font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 1.1em; }
-
-nav {
-  flex: 1;
-  text-align: right; }
-  nav a {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-left: 1.5em;
-    font-size: 0.8em; }
+  color: #1a237e; }
 
 .mission {
-  font-size: 1.5em;
-  margin: 0 0 1em 0; }
+  font-size: 0.85em;
+  max-width: 42em;
+  margin: 0 auto; }
 
-.services {
-  line-height: 1.6;
-  font-size: 1.2em; }
-  .services h6 {
-    text-transform: uppercase;
-    font-size: 0.8em; }
-  .services .button {
-    margin: 1em 0 0 0; }
+#hosny .setup h2 {
+  font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.button {
-  border: 2px solid #1a237e;
-  padding: 0.5em 1em 0.4em;
-  font-size: 1.1em;
-  display: inline-block;
-  color: #1a237e;
-  box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.8); }
-  .button:hover {
-    text-decoration: none;
-    box-shadow: 1px 1px 12px rgba(249, 98, 98, 0.9); }
-
-.work h2, .workshops h2 {
-  font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  margin-bottom: 0.5em;
-  padding-right: 1em; }
-.work h6, .workshops h6 {
-  padding-right: 1em; }
-.work img, .workshops img {
-  width: 100%;
-  margin: 0 0 0.5em 0;
-  box-shadow: 1px 1px 8px rgba(249, 98, 98, 0.2); }
-.work ul, .workshops ul {
-  margin: 0 0 1.5em;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-.work li, .workshops li {
-  flex: 1;
-  min-width: 240px;
-  max-width: 280px;
-  margin: 0 0 2em 0; }
-
-section, article {
-  margin-bottom: 4em; }
-  section header, article header {
-    padding: 0 0 1em 0;
-    margin: 0 0 1.5em 0;
-    border-bottom: 1px solid #1a237e; }
-    section header h1, article header h1 {
-      font-size: 3em;
-      text-shadow: 2px 2px 0px #55ee34; }
-    section header h5, article header h5 {
-      font-size: 1.2em; }
-
-section:last-child {
-  margin-bottom: 0; }
-
-.fullwidth {
-  max-width: none;
-  background: #fafed6;
-  padding: 3em; }
-
-.writing blockquote {
-  font-size: 1.5em; }
-.writing a {
-  margin: 1em 0 0 0;
-  display: block; }
-
-.workshops {
-  color: #9419ff; }
-  .workshops h1 {
-    text-shadow: 2px 2px 0px rgba(249, 98, 98, 0.5); }
-  .workshops li img {
-    border: 1px solid #9419ff; }
-
-article {
-  margin-top: 6em; }
-  article a {
-    text-decoration: underline; }
-  article img {
-    margin: 0 auto 3em auto;
-    display: block; }
-  article header {
-    margin-bottom: 3em; }
-  article p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-    line-height: 1.6; }
-  article .meta {
-    display: flex;
-    margin-bottom: 3em; }
-  article .intro {
-    flex: 4;
-    font-size: 1.2em;
-    padding-right: 3em; }
-  article .extra {
-    flex: 1; }
-    article .extra li:first-child {
-      text-transform: uppercase;
-      margin-bottom: 1em; }
-    article .extra ul {
-      margin-bottom: 2em; }
-  article blockquote {
-    color: #575b80;
-    padding-left: 2em; }
-  article .content h1, article .content h2, article .content h3, article .content h4, article .content h5, article .content h6 {
-    font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+.hosny-description {
+  text-align: center;
+  margin-bottom: 8em; }
+  .hosny-description h3 {
+    margin: 4em auto;
     font-weight: bold;
-    margin: 2.5em 0 1.5em 0; }
-  article .content h1 {
-    font-size: 2em; }
-  article .content h2 {
-    font-size: 1.6em; }
-  article .content h3 {
-    font-size: 1.4em; }
-  article .content h4 {
-    font-size: 1.2em; }
-  article .content h5 {
-    font-size: 1em; }
-  article .content h6 {
-    font-size: 0.8em; }
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 1px solid #1a237e; }
 
-.tools h2 {
-  font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.2em;
-  margin: 1.5em 0; }
-  .tools h2 a {
-    text-decoration: underline; }
-.tools p {
-  margin: 0 0 2em 0; }
-.tools img {
-  max-width: 250px; }
+.hosny-questions {
+  text-align: left;
+  display: flex;
+  justify-content: space-between; }
+  .hosny-questions h2 {
+    font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.2em;
+    min-height: 4em; }
+  .hosny-questions div {
+    flex: 1;
+    max-width: 45%; }
+  .hosny-questions p {
+    font-size: 0.9em; }
 
-.post {
-  margin: 0 0 4em 0; }
-  .post .post-title a {
-    color: #9419ff;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 0px rgba(249, 98, 98, 0.5); }
-  .post .post-published {
-    color: rgba(0, 0, 0, 0.4); }
-  .post .post-content {
-    margin: 1em 0;
-    font-size: 1.4em; }
+.hosny-wrapper {
+  clear: both;
+  border-top: 1px solid #ffaab6;
+  border-bottom: 1px solid #ffaab6; }
 
-.page-content {
-  font-size: 1.4em; }
-  .page-content p {
-    margin-bottom: 1em; }
+header {
+  padding-top: 4em; }
+  header h1 {
+    font-family: "Young Serif", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 0 0 0.5em 0; }
+
+footer {
+  text-align: center;
+  padding: 8em 0;
+  font-size: 0.9em; }
+  footer h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 0.5em 0; }
 
 /*# sourceMappingURL=main.css.map */
